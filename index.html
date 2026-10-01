@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-6wL5vkj126qXqGmTTJRsKCiHtGkFmeehDFixuS4281I='; style-src 'sha256-QMXgqzrF+/3HiQ7iVtIM22KITmK1VbzMrt56gbr73VQ='; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>تقييم الشخصية والعلاقة</title>
+<style>
+:root{color-scheme:dark;--a:.3;--c1:42 169 224;--c2:110 60 200;--glow:0 0 22px rgba(42,169,224,.55);--tg:0 0 26px rgba(42,169,224,.5);--btn:#04202e;--bg:#05070f;--card:rgba(18,26,46,.78);--ink:#eef2fb;--mute:#93a0bd;--acc:#2aa9e0;--line:#223052;--warn:#ff6b6b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{color-scheme:light;--bg:#eaf1fb;--card:rgba(255,255,255,.75);--ink:#0d1a33;--mute:#4f5d7a;--acc:#0a84c1;--line:#c9d7ee;--warn:#c62828;--a:.35;--glow:0 0 18px rgba(10,132,193,.35);--tg:none;--btn:#fff}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;background:var(--bg);background-attachment:fixed;transition:background .6s;color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:20px}
+main{width:100%;max-width:440px;text-align:center}
+.logo{width:96px;height:96px;margin:0 auto 22px;border-radius:50%;border:2px solid var(--acc);display:grid;place-items:center;font-size:30px;font-weight:800;color:var(--acc)}
+h1{font-size:26px;line-height:1.5;margin:0 0 12px;font-weight:800}
+h2{font-size:18px;margin:0 0 14px;text-align:right}
+p{color:var(--mute);line-height:1.8;margin:0 0 22px;font-size:15px}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;background:var(--acc);color:var(--btn);box-shadow:var(--glow);font-weight:700;font-size:17px;padding:15px 20px;width:100%}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+button.opt{background:var(--card);color:var(--ink);border:1px solid var(--line);margin-bottom:10px;text-align:right;border-radius:14px;font-weight:500;font-size:15px;line-height:1.6}
+button.opt:hover{border-color:var(--acc)}
+.bar{height:6px;background:var(--line);border-radius:3px;margin-bottom:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc);width:0}
+.pt{color:var(--acc);font-size:14px;font-weight:700;margin-bottom:14px;text-align:right}
+.q{font-size:20px;line-height:1.7;margin:0 0 20px;font-weight:700;text-align:right}
+small{display:block;margin-top:20px;color:var(--mute);font-size:12.5px;line-height:1.7}
+.tr{margin-bottom:14px;text-align:right}.tr b{display:flex;justify-content:space-between;font-size:15px;margin-bottom:6px}.tr span{color:var(--mute);font-weight:400;font-size:13px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:right;margin-bottom:18px}
+.box h3{margin:0 0 8px;font-size:18px}.box p{margin:0;font-size:15px}
+.box.warn{border-color:var(--warn)}.box.warn h3{color:var(--warn)}
+body{padding-top:64px;background-image:radial-gradient(circle at 15% 10%,rgb(var(--c1)/var(--a)),transparent 45%),radial-gradient(circle at 85% 90%,rgb(var(--c2)/var(--a)),transparent 50%)}
+body[data-bg="p0"]{--c1:20 184 166;--c2:42 169 224}
+body[data-bg="p1"]{--c1:139 92 246;--c2:236 72 153}
+body[data-bg="p2"]{--c1:239 68 68;--c2:245 158 11}
+body[data-bg="r"]{--c1:42 169 224;--c2:20 184 166}
+h1{text-shadow:var(--tg)}
+.logo{box-shadow:var(--glow),inset 0 0 18px rgba(42,169,224,.25);text-shadow:var(--tg)}
+.bar i{box-shadow:var(--glow)}
+button.opt,.box{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+button.opt{box-shadow:0 0 0 rgba(0,0,0,0);transition:box-shadow .25s,border-color .25s}
+button.opt:hover,button.opt:focus-visible{box-shadow:var(--glow)}
+.box{box-shadow:0 0 28px rgba(42,169,224,.12)}.box.warn{box-shadow:0 0 22px rgba(255,107,107,.3)}
+.ctl{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:10px;display:flex;gap:8px;align-items:center;z-index:5}
+.ctl button{width:auto;padding:8px 14px;font-size:14px;background:var(--card);color:var(--ink);border:1px solid var(--line);backdrop-filter:blur(12px);box-shadow:none}
+.ctl button:hover{box-shadow:var(--glow)}
+.ctl span{font-size:12px;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+[hidden]{display:none!important}
+.ctl{left:50%;right:auto;transform:translateX(-50%);width:max-content;max-width:96vw;flex-wrap:wrap;justify-content:center}
+body{padding-top:84px}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.ctl .seg button{border:0;border-radius:0;background:transparent;color:var(--ink);box-shadow:none;backdrop-filter:none}
+.ctl .seg button.on{background:var(--acc);color:var(--btn);box-shadow:var(--glow)}
+#rd{margin-bottom:18px}#traits{margin-bottom:22px}
+</style>
+</head>
+<body>
+<div class="ctl"><div class="seg" role="group" aria-label="الوضع"><button type="button" id="dk" class="on" aria-pressed="true">🌙 داكن</button><button type="button" id="lt" aria-pressed="false">☀️ فاتح</button></div><button type="button" id="sk" aria-label="تغيير الخلفية">🎨 الخلفية</button><span id="skn">تلقائي</span></div>
+<main>
+  <section id="intro">
+    <div class="logo" aria-hidden="true">ب</div>
+    <h1>تقييم الشخصية والعلاقة</h1>
+    <p>٢٨ سؤالًا في ثلاثة أجزاء، والأسئلة وترتيب الإجابات بيتغيروا في كل مرة: شخصيتك، ونظرتك للناس، وشخصية الشخص اللي بتحبه. في الآخر هتشوف ملامح شخصيتك ورأيًا هل تكمل العلاقة أم تعيد التفكير. لا نجمع أي بيانات، والنتيجة على جهازك فقط.</p>
+    <button id="start">ابدأ التقييم</button>
+    <small>التقييم يساعدك على التفكير فقط، وليس تشخيصًا نفسيًا ولا بديلًا عن مختص.</small>
+  </section>
+  <section id="quiz" hidden>
+    <div class="bar" role="progressbar" aria-label="التقدم"><i id="prog"></i></div>
+    <div class="pt" id="pt"></div>
+    <h2 class="q" id="qt"></h2>
+    <div id="opts"></div>
+  </section>
+  <section id="result" hidden>
+    <h1>ملامح شخصيتك</h1>
+    <p id="rd"></p>
+    <div id="traits"></div>
+    <div class="box" id="vbox"><h3 id="vt"></h3><p id="vd"></p></div>
+    <div class="box warn" id="safe" hidden><h3>تنبيه مهم لسلامتك</h3><p>بعض إجاباتك تدل على تحكم أو تهديد أو عنف. هذا ليس طبيعيًا ولا يُعتبر طباعًا. ابتعد عن الخطر، وتواصل مع شخص تثق فيه أو جهة مختصة بمساعدة ضحايا العنف في بلدك.</p></div>
+    <button id="again">إعادة التقييم</button>
+    <small>القرار النهائي قرارك أنت، وهذا التقييم يعتمد على وجهة نظرك فقط.</small>
+  </section>
+</main>
+<script>if(window.top!==window.self){document.documentElement.style.display="none";}
+
+(function(){
+"use strict";
+var T=["الاجتماعية","التنظيم والانضباط","الإبداع والفضول","التعاطف","الاتزان والهدوء"];
+var D=["تميل للتواصل وبناء العلاقات بسرعة.","تميل للتخطيط والالتزام وترتيب الأمور.","تميل للتجريب والأفكار الجديدة.","تميل لفهم مشاعر الآخرين ومساندتهم.","تميل للتصرف بهدوء وثبات تحت الضغط."];
+var P=["الجزء ١: شخصيتك","الجزء ٢: نظرتك للناس","الجزء ٣: الشخص اللي بتحبه"];
+// الأجزاء ١ و٢: [نص، خيارات[نص، سمة]]. الجزء ٣: [نص، خيارات[نص، درجة، خطر]]
+var Q=[
+[0,"وصلت إلى مكان جديد ولا تعرف فيه أحدًا. ماذا تفعل؟",[["أبدأ حديثًا مع من حولي",0],["أدرس المكان وأضع خطة لما سأفعله",1],["أستكشف المكان بفضول",2],["أبحث عن شخص يبدو وحيدًا وأجلس معه",3]]],
+[0,"صديقك منزعج ولا يريد الكلام. ماذا تفعل؟",[["أمنحه مساحة وأبقى قريبًا منه بهدوء",4],["أجلس معه وأستمع له",3],["أدعوه لنشاط يغيّر مزاجه",0],["أساعده بخطوات عملية لحل مشكلته",1]]],
+[0,"حدث موقف مفاجئ تحت ضغط الوقت. ما أول رد فعل لك؟",[["آخذ نفسًا وأفكر قبل التصرف",4],["أرتب الأولويات وأبدأ بالأهم",1],["أطلب مساعدة من حولي",0],["أبتكر حلًا غير تقليدي",2]]],
+[0,"انتقدك شخص على عمل قمت به. ماذا تفعل؟",[["أسمعه وأفصل بين الفكرة والشخص",4],["أراجع عملي وأصلح الأخطاء",1],["أحاول فهم سبب شعوره",3],["أستفيد من النقد لتجربة أسلوب جديد",2]]],
+[0,"زميل أخطأ وتأثر العمل بسبب خطئه. ماذا تفعل؟",[["أتحدث معه بلطف وأسأله عن ظروفه",3],["أصلح المشكلة وأضع نظامًا لمنع تكرارها",1],["أبقى هادئًا وأبحث عن السبب",4],["أجمع الفريق لنتفق على الحل",0]]],
+[0,"اختلفت مع صديق في الرأي. كيف تتصرف؟",[["أحاول فهم وجهة نظره أولًا",3],["أقترح فكرة جديدة تجمع الرأيين",2],["أناقش بهدوء دون انفعال",4],["أرتب النقاط وأعرضها بوضوح",1]]],
+[0,"طلب منك أحدهم مساعدة في يوم مزدحم. ماذا تفعل؟",[["أساعده وأعيد ترتيب يومي",3],["أحدد له وقتًا مناسبًا لاحقًا بوضوح",1],["أطلب من آخرين مشاركتي",0],["أبتكر طريقة تساعده بأقل وقت",2]]],
+[0,"عندما تفشل في شيء مهم:",[["أحلل السبب وأرتب خطة جديدة",1],["آخذ وقتي ثم أعود بهدوء",4],["أتحدث مع شخص قريب",0],["أجرب طريقة مختلفة تمامًا",2]]],
+[0,"في تجمع كبير من الأصدقاء أو العائلة:",[["أتحدث مع الجميع",0],["أنسق وأرتب الأمور",1],["أجلس مع من يبدو منعزلًا",3],["أتابع بهدوء وأشارك حين يلزم",4]]],
+[0,"عندما تتغير خطتك فجأة:",[["أرتب خطة بديلة بسرعة",1],["أراها فرصة لتجربة جديدة",2],["أتقبل الأمر وأكمل بهدوء",4],["أتفق مع من حولي على الحل",0]]],
+[0,"تقابل شخصًا يختلف معك في كل شيء:",[["أستمتع بمعرفة منظوره",2],["أبحث عن نقاط مشتركة",0],["أحافظ على الاحترام وأتجنب الجدال",4],["أحاول فهم ما يشعر به",3]]],
+[0,"عندما تضع هدفًا جديدًا:",[["أكتب خطوات ومواعيد",1],["أخبر من حولي ليشجعوني",0],["أبدأ بتجربة صغيرة وأتعلم",2],["أتقدم بثبات دون استعجال",4]]],
+[0,"أول ما تفعله عند التوتر:",[["أتنفس وأهدأ",4],["أتحدث مع شخص أثق به",0],["أكتب ما يقلقني وأرتبه",1],["أنشغل بنشاط مختلف",2]]],
+[0,"رأيت شخصًا يُظلم في موقف:",[["أتدخل لأسانده",3],["أتصرف بهدوء لحل الأمر",1],["أجمع من حولي لدعمه",0],["أفكر في طريقة ذكية لإنهاء الموقف",2]]],
+[1,"عند التعرف على شخص جديد، بماذا تحكم على شخصيته أكثر؟",[["أسلوبه في الكلام والتعامل",0],["التزامه بمواعيده ووعوده",1],["أفكاره واهتماماته المختلفة",2],["طريقته مع من هم أضعف منه",3]]],
+[1,"ما أهم صفة تقدّرها في أي إنسان؟",[["الحيوية وخفة الظل",0],["الالتزام والمسؤولية",1],["الطيبة والتفهم",3],["الهدوء والحكمة",4]]],
+[1,"عندما يتصرف شخص بشكل غريب، أول ما تفكر فيه:",[["أحاول فهم ظروفه",3],["أنتظر لأرى هل يتكرر التصرف",4],["أتساءل هل تصرفه مدروس أم عشوائي",1],["أسأله بصراحة",0]]],
+[1,"تثق بالشخص أكثر إذا:",[["تتطابق أفعاله مع كلامه",1],["يعامل الجميع بلطف",3],["يبقى هادئًا في الأزمات",4],["يعترف بأخطائه بسهولة",2]]],
+[1,"أكثر صفة تنفّرك من الناس:",[["الكذب",1],["القسوة وقلة التعاطف",3],["الانفعال الدائم",4],["رفض أي فكرة جديدة",2]]],
+[1,"تشعر أن الشخص مناسب لك عندما:",[["تشعر بالراحة معه",4],["تتشاركان الحديث والمرح",0],["يشجع نموك وتعلمك",2],["يحترم وعوده ومواعيده",1]]],
+[1,"تحكم على صدق الشخص من:",[["ثبات كلامه مع الوقت",1],["ملامحه وطريقة حديثه",0],["تعامله مع من لا يملكون قوة",3],["هدوئه عند مواجهته",4]]],
+[1,"شخص يخبرك بأخطائك بصراحة:",[["أقدّره إن كان بلطف",3],["أستفيد من ملاحظاته",2],["أراجع كلامه بهدوء",4],["أطلب منه أمثلة محددة",1]]],
+[1,"أكثر ما يكشف طبع الإنسان:",[["طريقة غضبه",4],["تعامله مع المال",1],["تعامله وقت الخلاف",3],["رد فعله أمام الجديد",2]]],
+[2,"عند الخلاف، شريكك غالبًا:",[["يتجاهلك لأيام",1],["يسمعك ويناقش بهدوء",3],["يصرخ عليك أو يهينك",0],["يحاول يكسب النقاش بأي طريقة",1]]],
+[2,"عندما يخطئ في حقك:",[["يعتذر لكنه يكرر نفس الخطأ",1],["ينكر ويقلب الموضوع عليك",0],["يعترف ويحاول يصلّح",3],["يلوم الظروف أو غيره",1]]],
+[2,"من ناحية الصدق:",[["يكذب غالبًا عند أي مشكلة",1],["صريح حتى لو الحقيقة صعبة",3],["أخفى عني أشياء صغيرة أحيانًا",2],["اكتشفت كذبه المتكرر في أمور مهمة",0]]],
+[2,"دعمه لك في أهدافك:",[["يشجعك ويفرح لنجاحك",3],["يقلل منك أو يسخر",0],["لا يهتم",1],["يدعمك إذا لم يؤثر عليه",2]]],
+[2,"الغيرة والتحكم:",[["يراجع هاتفك ويسأل عن كل تحركاتك",0,1],["يثق فيك ويتركك مع أصدقائك",3],["يغار أحيانًا لكنه يتكلم بصراحة",2],["يمنعك من رؤية أهلك أو أصدقائك",0,1]]],
+[2,"عندما يغضب:",[["يكسر أشياء أو يرمي ما بيده",0,1],["يهدأ ويرجع للحوار",3],["ينفعل ثم يهدأ بعد وقت",2],["هددك أو أذاك جسديًا",0,1]]],
+[2,"ثباته في المعاملة:",[["متقلب جدًا وتخاف أن تتكلم معه",0],["ثابت في معاملته",3],["يتغير حسب من حوله",1],["يتقلب أحيانًا لكنه يوضح السبب",2]]],
+[2,"المستقبل والقيم:",[["يتهرب من أي كلام عن المستقبل",1],["مختلف معي في أساسيات كبيرة ولا يتنازل",0],["واضح في خططه ومتفق معي في الأساسيات",3],["متردد لكنه يحاول",2]]],
+[2,"عندما تحتاجه في وقت صعب:",[["يتواجد ويسندك",3],["يتواجد أحيانًا",2],["يختفي",1],["يتهمك أنك السبب",0]]],
+[2,"مع أهلك وأصدقائك:",[["محترم وودود",3],["مجامل لكن بارد",2],["يتجاهلهم",1],["يحرجهم أو يسيء لهم",0]]],
+[2,"في المال والمسؤولية:",[["يتهرب من المسؤولية",1],["شفاف ومسؤول",3],["يتحكم في مالك أو يستغلك",0,1],["يتحمل أحيانًا",2]]],
+[2,"عندما تقول له لا:",[["يلح ويضغط",1],["يعاقبك أو يهددك",0,1],["يحترم قرارك",3],["ينزعج لكنه يتقبل",2]]],
+[2,"عندما يتغير مزاجك أو حالتك:",[["يسخر أو يستهزئ",0],["يتفهم ويسأل عنك",3],["يتجاهل",1],["ينتظر حتى تهدأ",2]]],
+[2,"بعد خلاف كبير:",[["نتصالح بدون حل حقيقي",2],["يجعلني أشعر بالذنب باستمرار",0],["نتصالح ونحل المشكلة فعلًا",3],["أنا دائمًا من يبادر بالصلح",1]]],
+[2,"عندما تنجح في شيء:",[["يفرح لك بصدق",3],["يهنئك فقط",2],["يقلل من إنجازك",0],["يغار ويفتعل مشكلة",1]]],
+[2,"في الأسرار والخصوصية:",[["يحافظ على أسرارك",3],["يحترم خصوصيتك غالبًا",2],["يتجسس أو يراقبك",0,1],["يتحدث عنك أمام الآخرين",1]]],
+[2,"عندما تحتاج وقتًا لنفسك:",[["يتفهم ويمنحك مساحة",3],["ينزعج لكنه يقبل",2],["يلح بالرسائل والمكالمات",1],["يعتبرها إهانة ويعاقبك",0,1]]],
+[2,"بعد نقاش في مشكلة بينكما:",[["يتغير للأفضل باستمرار",3],["يتغير قليلًا",2],["يعد ولا يلتزم",1],["لا يتغير ويحمّلك المشكلة",0]]]
+];
+var i=0,sum,hs,flag,S=[],mx=36;
+function rnd(n){var a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%n}
+function shuf(a){a=a.slice();for(var k=a.length-1;k>0;k--){var j=rnd(k+1),t=a[k];a[k]=a[j];a[j]=t}return a}
+function pick(part,n){return shuf(Q.filter(function(q){return q[0]===part})).slice(0,n).map(function(q){return[q[0],q[1],shuf(q[2])]})}
+function $(id){return document.getElementById(id)}
+function show(id){document.body.setAttribute("data-bg",id==="result"?"r":"i");["intro","quiz","result"].forEach(function(x){$(x).hidden=(x!==id)})}
+function render(){
+  var q=S[i];
+  document.body.setAttribute("data-bg","p"+q[0]);
+  $("qt").textContent=q[1];
+  $("pt").textContent=P[q[0]];
+  $("prog").style.width=(i/S.length*100)+"%";
+  var box=$("opts");box.textContent="";
+  q[2].forEach(function(o){
+    var b=document.createElement("button");
+    b.type="button";b.className="opt";b.textContent=o[0];
+    b.addEventListener("click",function(){
+      if(q[0]<2){sum[o[1]]++}else{hs+=o[1];if(o[2])flag=true}
+      next();
+    });
+    box.appendChild(b);
+  });
+}
+function level(p){return p>=60?"مرتفع":p>=30?"متوسط":"منخفض"}
+function verdict(p){
+  if(p>=75)return["العلاقة تبدو صحية في الغالب","شريكك يظهر احترامًا وصدقًا ودعمًا. كمّل، وحافظ على الحوار المفتوح وناقش أي ملاحظة صغيرة بدل تجاهلها."];
+  if(p>=50)return["فيها نقاط تحتاج حوارًا صريحًا","فيه جوانب جيدة وجوانب مقلقة. كمّل بشرط: تتكلم بوضوح عن ما يزعجك، وتراقب هل يتغير فعلًا خلال فترة محددة، وليس بالوعود فقط."];
+  if(p>=25)return["علامات مقلقة، فكّر جيدًا","أغلب الإجابات تشير إلى مشاكل في الاحترام أو الصدق أو الدعم. لا تكمل على الأمل وحده. حدد خطوطك الحمراء، وراجع قرارك مع شخص تثق فيه أو مختص في العلاقات."];
+  return["العلاقة غير صحية على الأرجح","الإجابات تشير إلى أنماط مؤذية. الحب وحده لا يكفي. الأفضل أن تبتعد أو على الأقل تضع مسافة وتطلب دعمًا من شخص تثق فيه."];
+}
+function next(){
+  i++;
+  if(i<S.length){render();return}
+  var c=[0,0,0,0,0];
+  S.forEach(function(q){if(q[0]<2)q[2].forEach(function(o){c[o[1]]++})});
+  var box=$("traits"),top=0,pc=[];box.textContent="";
+  T.forEach(function(name,t){
+    var p=Math.round(sum[t]/c[t]*100);pc.push(p);
+    if(p>pc[top])top=t;
+    var d=document.createElement("div");d.className="tr";
+    var h=document.createElement("b");
+    var n=document.createElement("em");n.style.fontStyle="normal";n.textContent=name;
+    var l=document.createElement("span");l.textContent=level(p)+" · "+p+"%";
+    h.appendChild(n);h.appendChild(l);
+    var bar=document.createElement("div");bar.className="bar";
+    var f=document.createElement("i");f.style.width=p+"%";bar.appendChild(f);
+    d.appendChild(h);d.appendChild(bar);box.appendChild(d);
+  });
+  $("rd").textContent="أبرز ملامحك: "+T[top]+". "+D[top];
+  var pct=Math.round(hs/mx*100);
+  var v=verdict(flag?Math.min(pct,24):pct);
+  $("vt").textContent=v[0];
+  $("vd").textContent=v[1]+" (درجة صحة العلاقة: "+pct+"%)";
+  $("safe").hidden=!flag;
+  show("result");
+}
+function reset(){S=pick(0,10).concat(pick(1,6),pick(2,12));mx=36;i=0;sum=[0,0,0,0,0];hs=0;flag=false;show("quiz");render()}
+var K=[["تلقائي"],["شفق","20 184 166","139 92 246"],["غروب","249 115 22","236 72 153"],["محيط","14 165 233","6 182 212"],["نيون","34 197 94","217 70 239"]],ki=0;
+$("sk").addEventListener("click",function(){
+  ki=(ki+1)%K.length;var k=K[ki],st=document.body.style;
+  if(ki===0){st.removeProperty("--c1");st.removeProperty("--c2")}else{st.setProperty("--c1",k[1]);st.setProperty("--c2",k[2])}
+  $("skn").textContent=k[0];
+});
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme",t);
+  $("dk").className=t==="dark"?"on":"";$("lt").className=t==="light"?"on":"";
+  $("dk").setAttribute("aria-pressed",t==="dark");$("lt").setAttribute("aria-pressed",t==="light");
+}
+$("dk").addEventListener("click",function(){setTheme("dark")});
+$("lt").addEventListener("click",function(){setTheme("light")});
+$("start").addEventListener("click",reset);
+$("again").addEventListener("click",reset);
+})();
+</script>
+</body>
+</html>
